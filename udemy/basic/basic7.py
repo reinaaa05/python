@@ -91,5 +91,5 @@ print(msg.rfind('ABC'))
 print(msg.index('ABC'))
 print(msg.rindex('ABC'))
 
-print(msg.find('ABCE'))
-print(msg.index('ABCE'))
+print(msg.find('ABCE')) #存在しないとき-1が表示
+print(msg.index('ABCE')) #存在しないときerrorが表示
