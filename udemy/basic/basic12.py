@@ -14,7 +14,5 @@ print(fruit.count('apple'))
 print(fruit.index('apple'))
 
 pos = (135,35)
-
 countries = {pos: 'Japan'}
-
 print(countries.get(135,35))
