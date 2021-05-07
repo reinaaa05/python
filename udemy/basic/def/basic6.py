@@ -1,16 +1,24 @@
-# list,generator memory
+#サブジェネレーター
 
-import sys
-list_a = [i for i in range(100000)]
-def num(max):
-    i = 0
-    while i < max:
-        yield i
-        i += 1
+def sub_sub_generater():
+    yield "Sub Subのyield"
+    return "sub sub のreturn"
 
-# for i in list_a:
-#     print(i)
+def sub_generater():
+    yield "subのyield"
+    res = yield from sub_sub_generater()
+    print("sub res = {}".format(res))
+    return "subのreturn"
 
-gen = num(100000)
-print(sys.getsizeof(list_a))
-print(sys.getsizeof(gen))
+def generator():
+    yield "generatorのyield"
+    res = yield from sub_generater()
+    print('sub res = {}'.format(res))
+    return "generatorのreturn"
+
+gen = generator()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
