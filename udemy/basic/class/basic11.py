@@ -28,10 +28,12 @@ class Human:
     def print_msg(self):
         print(self.name,self.age)
 
+#set__が呼ばれる
 human = Human('Taro',15)
 human.name = 'Jiro'
 human.age = 18
 
+#get__が呼ばれる
 name = human.name
 age = human.age
 print(name,age)

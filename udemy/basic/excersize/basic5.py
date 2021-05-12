@@ -35,4 +35,4 @@ elif number == '3':
     animal = Sheep()
 else: 
     animal = Other()
-animal.speak() #speakの呼び出し
+animal.speak() #speakの呼び出し (ポリモーフィズム)

@@ -26,7 +26,7 @@ class Man(Human):
         print('男性: 名前は={}'.format(self.name))
 
 
-human = Woman('Hanako')
+# human = Woman('Hanako')
 
 
 #ポリモーフィズム
